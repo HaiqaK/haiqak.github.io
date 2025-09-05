@@ -12,11 +12,15 @@
 <script>(function(t,e,s,o){var n,a,c;t.SMCX=t.SMCX||[],e.getElementById(o)||(n=e.getElementsByTagName(s),a=n[n.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=o,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd8rEAK3D_2BFYCQ_2F4Alpm3z0KXO6UVGDa5UNbrZ_2Bqpj2iR.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
 
 <style>
-/* Try to Override SurveyMonkey Widget Position */
-.smcx-embed {
-  right: auto !important;
-  left: 0 !important;
-}
-</style>
+    /* Override the default positioning of the feedback button */
+    .smcx-passive-feedback > .smcx-btn-primary {
+      position: fixed !important;
+      left: 40px !important;        /* place it 40px from the left edge */
+      right: auto !important;       /* clear the default right: 0 */
+      bottom: calc(10vh + 100px) !important;      /* keep the default vertical offset */
+      transform: rotate(-90deg) translate(-100%, 0) !important;
+      transform-origin: bottom left !important;
+    }
+  </style>
 </body>
 </html>
