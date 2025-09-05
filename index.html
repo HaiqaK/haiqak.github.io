@@ -9,36 +9,7 @@
 	<button type="submit">Search</button>
 </form>
 
-<script>
-	document.getElementById('search-form').addEventListener('submit', function(e) {
-		e.preventDefault();
-		var query = document.getElementById('search-input').value;
-		document.getElementById('user-search').setAttribute('ub-in-page-user-search', query);
-
-		// Only load Usabilla after a search is made
-		if (!window.usabillaLoaded) {
-			var script = document.createElement('script');
-			script.innerHTML = `window.usabilla||function(){var a=window,d=a.document,c={},f=d.createElement("div"),h=!1,a=a.usabilla=function(){(c.a=c.a||[]).push(arguments)};a._=c;c.ids={};f.style.display="none";(function(){if(!d.body)return setTimeout(arguments.callee,100);d.body.insertBefore(f,d.body.firstChild).id="usabilla";h=!0})();a.load=function(a,g,k){if(!c.ids[g]){var e=c.ids={};e.url="//"+a+"/"+g+".js?s1";e.config=k;setTimeout(function(){if(!h)return setTimeout(arguments.callee,100);var b=d.createElement("iframe"),a;b.id="usabilla-"+g;/MSIE[ ]+6/.test(navigator.userAgent)&&(b.src="javascript:false");f.appendChild(b);try{b.contentWindow.document.open()}catch(c){e.domain=d.domain,a="javascript:var d=document.open();d.domain='"+e.domain+"';",b.src=a+"void(0);"}try{var l=b.contentWindow.document;l.write(["<!DOCTYPE html><html><head></head><body onload=\"var d = document;d.getElementsByTagName('head')[0].appendChild(d.createElement('script')).src='",e.url,"'\"></body></html>"].join(""));l.close()}catch(m){b.src=a+'d.write("'+loaderHtml().replace(/\"/g,String.fromCharCode(92)+'\"')+'\");d.close();'}b.contentWindow.config=k;b.contentWindow.SCRIPT_ID=g},0)}}}();window.usabilla.load("w.usabilla.com", "bed76986071a");`;
-			document.body.appendChild(script);
-			window.usabillaLoaded = true;
-		}
-	});
-</script>
-
-<form id="search-form" style="margin-top:20px;">
-	<input type="text" id="search-input" placeholder="Search..." />
-	<button type="submit">Search</button>
-</form>
-
-<script>
-		document.getElementById('search-form').addEventListener('submit', function(e) {
-			e.preventDefault();
-			var query = document.getElementById('search-input').value;
-			document.getElementById('user-search').setAttribute('ub-in-page-user-search', query);
-		});
-</script>
-
-<div id="user-search" ub-in-page="689a0849bcc4b30052393c28"></div>
+<script>(function(t,e,s,o){var n,a,c;t.SMCX=t.SMCX||[],e.getElementById(o)||(n=e.getElementsByTagName(s),a=n[n.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=o,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd8rEAK3D_2BFYCQ_2F4Alpm3z0KXO6UVGDa5UNbrZ_2Bqpj2iR.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
 
 </body>
 </html>
